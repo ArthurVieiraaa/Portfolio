@@ -9,11 +9,6 @@
 
 body{
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #1C1C1C;
-    overflow: hidden;
 }
 
 .border{
@@ -22,6 +17,12 @@ body{
 
 .border1{
     border: 1px solid rgb(43, 255, 0);
+}
+
+html{
+    scroll-behavior: smooth;
+    height: auto;
+    background: #1C1C1C;
 }
 
 .container{
@@ -47,14 +48,28 @@ header{
 }
 
 header.rolagem{
-    background-color: #fff;
+    background: #1C1C1C;
     padding: 20px 4%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.5s;
 }
 
 header.rolagem a{
-    color: #000;
+    color: #fff;
+}
+
+header.rolagem a:hover{
+    color: #008B8B;
+}
+
+header.rolagem button{
+    background-color: #008B8B;
+    color: #fff;
+}
+
+header.rolagem button:hover{
+    background-color: #fff;
+    color: #008B8B;
 }
 
 header img{
@@ -121,27 +136,28 @@ header ul li a:hover{
 }
 
 .btn-cv button:hover{
-    background-color: #008B8B;
-    color: #fff;
+    background-color: #fff;
+    color: #008B8B;
     transition: all 0.5s;
 }
 
 .hero-section{
     width: 100%;
-    height: 100vh;
+    height: 75vh;
 }
 
 .hero-section-content{
     width: 90%;
-    height: 80%;
-    margin: 150px auto;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero-img{
-    width: 40%;
+    width: 35%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -149,25 +165,27 @@ header ul li a:hover{
 }
 
 .hero-img img{
-    width: 80%;
+    width: 65%;
     height: auto;
     border-radius: 50%;
     box-shadow: 0px 0px 40px 0px rgba(0, 201, 201, 0.5);
-    animation: example 5s infinite;
+    animation: flutuar 5s infinite;
+    object-fit: cover;
 }
 
-@keyframes example{
+@keyframes flutuar{
     50%{
         transform: translateY(-2%);
     }
 }
 
 .hero-sobre{
-    width: 60%;
+    width: 55%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .hero-sobre-content{
@@ -222,6 +240,167 @@ header ul li a:hover{
     }
 }
 
-.hero-sobre-content p{
-    top: 40px;
+.hero-sobre-content h3{
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.btn-social{
+    width: 90%;
+    display: flex;
+    margin-top: 30px;
+    gap: 25px;
+}
+
+.btn-social .btn-link{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.btn-social .btn-link i{
+    font-size: 20px;
+}
+
+.btn-social .btn-link:hover{
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+#github{
+    background-color: #008B8B;
+}
+
+#linkedin{
+    background-color: #008B8B;
+}
+
+.btn-social ul li i:hover{
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.about-section{
+    width: 100%;
+    height: 60vh;
+    padding: 0 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text{
+    width: 60%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-text-content{
+    width: 90%;
+    height: auto;
+}
+
+.about-text-content h1{
+    font-size: 40px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.about-text-content p{
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.tab-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.tab-box .tab-btn{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    background: none;
+    border: none;
+    margin-top: 12px;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.tab-box .tab-btn.active{
+    color: #008B8B;
+}
+
+.tab-content-box{
+    width: 45%;
+    padding: 10px;
+}
+
+.tab-content-box .tab-content{
+    display: none;
+    animation: moving 1s ease;
+}
+
+@keyframes moving{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+}
+
+.tab-content-box .tab-content.active{
+    display: block;
+}
+
+.tab-content-box .tab-content ul li{
+    margin-bottom: 5px;
+}
+
+.line{
+    position: absolute;
+    top: 60px;
+    left: 235px;
+    width: 134px;
+    height: 4px;
+    background-color: #008B8B;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-img{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10%;
 }
