@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Meu Portfólio</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "sDEsSFoBHnugReiwP",
+        });
+    })();
+    </script>
 </head>
 <body>
     <header id="header">
@@ -45,6 +55,9 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="middle">
+            <div class="mouse"></div>
         </div>
     </section>
 
@@ -145,24 +158,34 @@
                     <div class="contact-text-content">
                         <h1>Vamos nos conectar!</h1>
                         <p>Atualmente estou em busca de novas oportunidades, minha caixa de entrada está sempre aberta. Se você tiver alguma dúvida ou apenas quiser dizer oi, irei entrar em contato o mais rápido possivel com você!</p>
-                    </div>        
+                    </div>
+                    <div class="btn-social-contact">
+                        <a href="https://github.com/ArthurVieiraaa" class="btn-link" id="github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/avieirabruske/" class="btn-link" id="linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>    
                 </div>
                 <div class="contact-form-content">
-                    <form action="">
+                    <form onsubmit="emailSend(); reset(); return false;">
                         <h1>Nome:</h1>
-                        <input type="text" name="" id="" placeholder="Seu nome:" required>
+                        <input type="text" name="name" id="name" placeholder="Seu nome:" required>
                         <h1>Email:</h1>
-                        <input type="text" name="" id="" placeholder="Seu Email:" required>
+                        <input type="text" name="email" id="email" placeholder="Seu Email:" required>
                         <h1>Mensagem:</h1>
-                        <textarea name="" id="" placeholder="Sua mensagem:" required></textarea>
-                        <div class="btn-enviar"><input type="submit" value="Enviar"></div>
+                        <textarea name="message" id="message" placeholder="Sua mensagem:" required></textarea>
+                        <div class="btn-enviar"><input type="submit" value="Enviar" id="send-button"></div>
                     </form>
                 </div>
             </div>
     </section>
 
-    <footer>
-        
+    <footer class="footer-section">
+        <div class="footer-section-content">
+          <p class="text-footer">2024 © Todos os direitos reservados.</p>
+        </div>
     </footer>
     <script src="assets/js/script.js"></script>
 </body>

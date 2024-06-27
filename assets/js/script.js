@@ -36,3 +36,22 @@ tabs.forEach((tab, index) =>{
         all_content[index].classList.add('active');
     })
 })
+
+let sendButton = document.querySelector('send-button');
+const form = document.querySelector('form');
+
+sendButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    sendButton.value = 'Enviando...';
+    const serviceID = 'service_n0bcnct';
+    const templateID = 'template_9u2uzik';
+    
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            sendButton.value = 'Enviar Email';
+            alert('Email enviado com sucesso!');
+        }, (err) => {
+            sendButton.value = 'Enviar Email';
+            alert(JSON.stringify(err));
+        });
+});
