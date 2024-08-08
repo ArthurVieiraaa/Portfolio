@@ -20,6 +20,11 @@ const textLoad = () => {
 textLoad();
 setInterval(textLoad, 12000);
 
+const hamburguer = document.querySelector(".hamburguer");
+const nav = document.querySelector(".nav");
+
+hamburguer.addEventListener("click", () => nav.classList.toggle("active"));
+
 const tabs = document.querySelectorAll('.tab-btn');
 const all_content = document.querySelectorAll('.tab-content');
 
@@ -37,21 +42,25 @@ tabs.forEach((tab, index) =>{
     })
 })
 
-let sendButton = document.querySelector('send-button');
 const form = document.querySelector('form');
 
-sendButton.addEventListener('click', function(e) {
+function emailSend(e) {
     e.preventDefault();
-    sendButton.value = 'Enviando...';
     const serviceID = 'service_n0bcnct';
     const templateID = 'template_9u2uzik';
-    
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            sendButton.value = 'Enviar Email';
-            alert('Email enviado com sucesso!');
-        }, (err) => {
-            sendButton.value = 'Enviar Email';
-            alert(JSON.stringify(err));
-        });
-});
+
+    const valor = {
+        from_name: document.querySelector('#name').value,
+        message: document.querySelector('#message').value,
+        email: document.querySelector('#email').value
+    };
+
+    emailjs.send(serviceID, templateID, valor)
+    .then(() => {
+        console.log('SUCCESS!');
+        form.reset();
+    })
+    .catch(err => console.log('FAILED...', err));
+};
+
+form.addEventListener('submit', emailSend);
