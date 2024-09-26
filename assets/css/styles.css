@@ -59,17 +59,17 @@ header.rolagem a{
 }
 
 header.rolagem a:hover{
-    color: #008B8B;
+    color: #e08a00;
 }
 
 header.rolagem button{
-    background-color: #008B8B;
+    background-color: #e08a00;
     color: #fff;
 }
 
 header.rolagem button:hover{
     background-color: #fff;
-    color: #008B8B;
+    color: #e08a00;
 }
 
 header img{
@@ -100,7 +100,7 @@ nav .nav-list li a{
 nav .nav-list li a::after{
     content: "";
     position: absolute;
-    background-color: #008B8B;
+    background-color: #e08a00;
     width: 0;
     height: 2px;
     left: 0;
@@ -114,7 +114,7 @@ nav .nav-list li a:hover::after{
 }
 
 nav .nav-list li a:hover{
-    color: #008B8B;
+    color: #e08a00;
     transition: all 0.5s;
 }
 
@@ -147,7 +147,7 @@ nav .nav-list li a:hover{
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: #008B8B;
+        background: #e08a00;
         clip-path: circle(100px at -90% -15%);
         transition: 1.5s ease-in-out;
         display: flex;
@@ -169,7 +169,7 @@ nav .nav-list li a:hover{
 }
 
 .btn-cv button{
-    background-color: #008B8B;
+    background-color: #e08a00;
     border: none;
     width: 200px;
     height: 50px;
@@ -183,7 +183,7 @@ nav .nav-list li a:hover{
 
 .btn-cv button:hover{
     background-color: #fff;
-    color: #008B8B;
+    color: #e08a00;
     transition: all 0.5s;
 }
 
@@ -214,7 +214,7 @@ nav .nav-list li a:hover{
     width: 65%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0px 0px 40px 0px rgba(0, 201, 201, 0.5);
+    box-shadow: 0px 0px 40px 0px rgba(192, 121, 1, 0.65);
     animation: flutuar 5s infinite;
     object-fit: cover;
 }
@@ -241,7 +241,7 @@ nav .nav-list li a:hover{
 }
 
 .hero-sobre-content h1{
-    color: #00a7a7;
+    color: #e08a00;
     font-size: 40px;
     font-weight: 500;
     font-style: normal;
@@ -256,7 +256,7 @@ nav .nav-list li a:hover{
 
 .hero-sobre-content .text{
     position: relative;
-    color: #00a7a7;
+    color: #e08a00;
     font-size: 25px;
     font-weight: 400;
 }
@@ -273,7 +273,7 @@ nav .nav-list li a:hover{
     height: 100%;
     width: 100%;
     background-color: #1C1C1C;
-    border-left: 2px solid #00a7a7;
+    border-left: 2px solid #e08a00;
     animation: animate 4s steps(30) infinite;
 }
 
@@ -322,11 +322,11 @@ nav .nav-list li a:hover{
 }
 
 #github{
-    background-color: #008B8B;
+    background-color: #e08a00;
 }
 
 #linkedin{
-    background-color: #008B8B;
+    background-color: #e08a00;
 }
 
 .btn-social ul li i:hover{
@@ -354,7 +354,7 @@ nav .nav-list li a:hover{
     height: 10px;
     position: absolute;
     top: 20px;
-    left: 15%;
+    left: 17%;
     background: #929292;
     transform: translateX(50%);
     border-radius: 50%;
@@ -438,7 +438,7 @@ nav .nav-list li a:hover{
 }
 
 .tab-box .tab-btn.active{
-    color: #008B8B;
+    color: #e08a00;
 }
 
 .tab-content-box{
@@ -471,7 +471,7 @@ nav .nav-list li a:hover{
     left: 0;
     min-width: 134px;
     height: 4px;
-    background-color: #008B8B;
+    background-color: #e08a00;
     border-radius: 50px;
     transition: all 0.5s ease-in-out;
 }
@@ -539,7 +539,7 @@ nav .nav-list li a:hover{
     padding: 10px;
     margin-top: 15px;
     margin-bottom: 35px;
-    box-shadow: 0px 0px 15px 0px rgba(0, 201, 201, 0.5);
+    box-shadow: 0px 0px 15px 0px rgba(195, 121, 1, 0.65);
 }
 
 .project-name{
@@ -565,7 +565,55 @@ nav .nav-list li a:hover{
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    border: 0.5px solid rgba(0, 201, 201, 0.5);
+    border: 0.5px solid rgba(195, 121, 1, 0.65);
+}
+
+.project-img .overlay{
+    width: 700px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.project-img .overlay button,
+.project-img .overlay a {
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 2px solid #e08a00;
+    border-radius: 50%;
+    border-width: 2px;
+    margin-right: .5rem;
+    position: relative;
+    color: #e08a00;
+    text-decoration: inherit;
+    transition: all 0.3s;
+    background-color: #00000046;
+}
+
+.project-img .overlay button:hover
+.project-img .overlay a:hover {
+    color: #fff;
+    border: 2px solid #fff;
+    transition: all 0.3s;
+}
+
+.project-img .overlay button svg,
+.project-img .overlay a svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+}
+
+.project-img:hover .overlay{
+    opacity: 1;
+    transition: all 0.5s;
 }
 
 .project-img img{
@@ -584,6 +632,166 @@ nav .nav-list li a:hover{
     margin-top: 15px;
     animation: icon-flutuar 4.5s infinite;
 }
+
+.toast {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  outline: 0;
+  display: none;
+}
+
+.toast .toast-container.toast-centered {
+  min-height: calc(100% - 3.5rem)
+}
+
+.toast .toast-container {
+  display: flex;
+  margin: 1.75rem auto;
+  max-width: 1080px;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast .toast-container .toast-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+  pointer-events: auto;
+  background-color: #2b2a2a;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 20px;
+  outline: 0;
+}
+
+.toast .toast-container .toast-content .toast-h {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #929292;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+}
+
+.toast .toast-container .toast-content .toast-h h5 {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+}
+
+.toast .toast-container .toast-content .toast-h i {
+  cursor: pointer;
+  transform: scale(1.5);
+  color: #e08a00;
+}
+
+
+.toast .toast-container .toast-content .content {
+    width: 935px;
+    height: 520px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 35px;
+}
+
+.toast .toast-container .toast-content .navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.toast .toast-container .toast-content .bar {
+    width: 70px;
+    height: 17px;
+    border-radius: 5px;
+    margin: 6px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.toast .toast-container .toast-content .bar:hover {
+    background-color: #fff;
+    transition: all 0.4s;
+}
+
+.toast .toast-container .toast-content .slides input {
+    display: none;
+}
+
+.toast .toast-container .toast-content .slides {
+    display: flex;
+    width: 500%;
+    height: 90%;
+}
+
+.toast .toast-container .toast-content .slide {
+    width: 20%;
+    transition: 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast .toast-container .toast-content .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.toast .toast-container .toast-content #slide1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+.toast .toast-container .toast-content #slide2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+.toast .toast-container .toast-content #slide3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+.toast .toast-container .toast-content #slide4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+.toast .toast-container .toast-content #slide5:checked ~ .s1 {
+    margin-left: 0;
+}
+
+.toast .toast-container .toast-content #slide6:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+.toast .toast-container .toast-content #slide7:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+.toast .toast-container .toast-content #slide8:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+
 
 @keyframes icon-flutuar{
     0%,
@@ -681,11 +889,11 @@ nav .nav-list li a:hover{
 }
 
 #github{
-    background-color: #008B8B;
+    background-color: #e08a00;
 }
 
 #linkedin{
-    background-color: #008B8B;
+    background-color: #e08a00;
 }
 
 .btn-social ul li i:hover{
@@ -750,14 +958,14 @@ nav .nav-list li a:hover{
 
 .contact-form-content form .btn-enviar button{
     width: 120px;
-    background-color: #008B8B;
+    background-color: #e08a00;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.5s;
 }
 
 .contact-form-content form .btn-enviar button:hover{
-    box-shadow: 0px 0px 10px 0px rgba(0, 201, 201, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(195, 121, 1, 0.65);
     transform: scale(1.05);
     transition: all 0.5s;
 }
@@ -903,7 +1111,7 @@ nav .nav-list li a:hover{
         left: auto;
         min-width: auto;
         height: 3px;
-        background-color: #008B8B;
+        background-color: #e08a00;
         border-radius: 50px;
         transition: all 0.5s ease-in-out;
     }

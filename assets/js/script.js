@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function(){
+    window.addEventListener("scroll", function(){
     let header = document.querySelector('#header')
     header.classList.toggle('rolagem', window.scrollY > 30)
 })
@@ -64,3 +64,22 @@ function emailSend(e) {
 };
 
 form.addEventListener('submit', emailSend);
+
+
+//  Abrir e Fechar Modal de Projetos
+document.querySelector("#button-scrzclothing").addEventListener("click", () => {
+    document.querySelector("#scrzclothing").style = "display: block"
+}
+),
+document.querySelector("#close-scrzclothing").addEventListener("click", () => {
+    document.querySelector("#scrzclothing").style = "display: none"
+}
+),
+document.querySelector("#button-portfolio").addEventListener("click", () => {
+    document.querySelector("#portfolio").style = "display: block"
+}
+),
+document.querySelector("#close-portfolio").addEventListener("click", () => {
+    document.querySelector("#portfolio").style = "display: none"
+}
+)
