@@ -25,6 +25,16 @@ const nav = document.querySelector(".nav");
 
 hamburguer.addEventListener("click", () => nav.classList.toggle("active"));
 
+const close_about = document.querySelector("#about");
+close_about.addEventListener("click", () => nav.classList.remove("active"));
+
+const close_project = document.querySelector("#project");
+close_project.addEventListener("click", () => nav.classList.remove("active"));
+
+const close_contact = document.querySelector("#contact");
+close_contact.addEventListener("click", () => nav.classList.remove("active"));
+
+
 const tabs = document.querySelectorAll('.tab-btn');
 const all_content = document.querySelectorAll('.tab-content');
 
