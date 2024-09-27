@@ -11,6 +11,7 @@ ___________________________________
 
 ![HTML](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=ffffff)
 ![CSS](https://img.shields.io/badge/css3-563d7c.svg?style=for-the-badge&logo=css3&logoColor=ffffff)
+![JS](https://img.shields.io/badge/javascript-f0db4f?style=for-the-badge&logo=javascript&logoColor=000000)
 ____________________________________
 ### 🚀 - Portfolio
 
