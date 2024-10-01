@@ -115,7 +115,7 @@ nav .nav-list li a:hover::after{
 
 nav .nav-list li a:hover{
     color: #704500;
-    transition: all 0.5s;
+    transition: all 0.3s;
     font-weight: 600;
 }
 
@@ -589,7 +589,6 @@ nav .nav-list li a:hover{
     transition: all 0.5s;
 }
 
-
 .project-img .overlay button,
 .project-img .overlay a {
     height: 3.5rem;
@@ -605,11 +604,13 @@ nav .nav-list li a:hover{
     background-color: #00000046;
 }
 
-.project-img .overlay button:hover
-.project-img .overlay a:hover {
-    color: #fff;
-    border: 2px solid #fff;
+
+.project-img .overlay button:hover,
+.project-img .overlay a:hover{
     transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fff;
+    color: #fff;
 }
 
 .project-img .overlay button svg,
@@ -619,6 +620,14 @@ nav .nav-list li a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 2rem;
+    color: #e08a00;
+    transition: all 0.3s;
+}
+
+.project-img .overlay button svg:hover,
+.project-img .overlay a svg:hover{
+    color: #fff;
+    transition: all 0.3s;
 }
 
 .project-img img{
